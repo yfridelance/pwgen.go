@@ -8,3 +8,11 @@ services:
       - HIBP_ENABLED=true
       - DEFAULT_LENGTH=16
     restart: unless-stopped
+
+  frontend:
+    build: ./web
+    ports:
+      - "5070:80"
+    depends_on:
+      - pwgen
+    restart: unless-stopped

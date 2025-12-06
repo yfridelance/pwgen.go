@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-darker text-light antialiased;
+  }
+}
+
+.range-slider {
+  @apply w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 bg-primary rounded-full shadow-lg transition-transform hover:scale-110;
+}
