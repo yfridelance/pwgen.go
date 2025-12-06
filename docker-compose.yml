@@ -1,0 +1,10 @@
+services:
+  pwgen:
+    build: .
+    ports:
+      - "5069:5069"
+    environment:
+      - MULTI_GEN=true
+      - HIBP_ENABLED=true
+      - DEFAULT_LENGTH=16
+    restart: unless-stopped
